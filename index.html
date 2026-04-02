@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blogly — Blog Platform Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom subtle scrollbar for comment pane */
+    .scrollbar-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(100,116,139,0.4); border-radius: 8px; }
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+  <main class="min-h-screen flex items-center justify-center p-6">
+    <section class="w-full max-w-4xl bg-white border border-slate-200 shadow-lg rounded-2xl p-8 md:p-10">
+      <!-- Header / Intro -->
+      <div class="flex gap-6 items-start">
+        <div class="flex-shrink-0">
+          <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-indigo-500 to-rose-500 flex items-center justify-center text-white text-xl font-semibold shadow-md">
+            B
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h1 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900">Blogly — Modern Blogging Platform with Comments</h1>
+              <p class="mt-2 text-sm md:text-base text-slate-600 max-w-xl">
+                Publish thoughtful posts, engage your audience with real-time comments, and manage conversations with elegant moderation and insights. A focused experience for creators and readers.
+              </p>
+            </div>
+
+            <div class="hidden md:flex flex-col items-end">
+              <span class="text-xs text-slate-500">Preview</span>
+              <div class="mt-2 inline-flex gap-2">
+                <a href="#" class="inline-flex items-center px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md shadow-sm">Get started</a>
+                <a href="#" class="inline-flex items-center px-3 py-2 border border-slate-200 bg-white text-sm font-medium rounded-md text-slate-700 hover:bg-slate-50">Explore demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features / Badges -->
+          <div class="mt-5 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-full">📝 Rich editor</span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-full">💬 Threaded comments</span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-full">🔒 Moderation tools</span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 text-slate-700 text-sm rounded-full">📊 Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-6 border-t border-slate-100"></div>
+
+      <!-- Single medium-sized preview area: blog post card with comment pane -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Post preview (left two columns) -->
+        <article class="md:col-span-2 bg-gradient-to-b from-white to-slate-50 border border-slate-100 rounded-xl p-6 shadow-sm">
+          <header class="flex items-start justify-between">
+            <div>
+              <h2 class="text-xl font-semibold text-slate-900">Designing for Focus: Minimal Interfaces that Delight</h2>
+              <p class="mt-2 text-sm text-slate-500">By <span class="font-medium text-slate-700">Ava Cole</span> • Mar 14, 2026 • 6 min read</p>
+            </div>
+            <div class="flex items-center gap-3 text-slate-500">
+              <span class="inline-flex items-center gap-1 text-sm bg-slate-100 px-2 py-1 rounded-full">UI/UX</span>
+              <div class="text-sm">❤ 128</div>
+            </div>
+          </header>
+
+          <div class="mt-4 text-slate-700">
+            <p class="text-base leading-relaxed">
+              Minimal design isn't about removing personality—it's about prioritizing clarity. In this post, we explore practical patterns to reduce cognitive load, guide attention, and build interfaces that help users accomplish more with less friction.
+            </p>
+          </div>
+
+          <footer class="mt-6 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="flex -space-x-2">
+                <img alt="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=99e6e8ff1a2e3c2c9a6a9d5f8b7c9b4b" class="w-8 h-8 rounded-full border border-white shadow-sm">
+                <img alt="avatar" src="https://images.unsplash.com/photo-1545996124-1a9cf2d5a6a6?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=5c6ee7f9f6b8d1b2f8f27d9a0e5b3f6a" class="w-8 h-8 rounded-full border border-white shadow-sm">
+              </div>
+              <div class="text-sm text-slate-500">Featured in <span class="text-slate-700 font-medium">Editor's Picks</span></div>
+            </div>
+
+            <a href="#" class="inline-flex items-center gap-2 px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md">Read full post</a>
+          </footer>
+        </article>
+
+        <!-- Comment preview pane (right column) -->
+        <aside class="bg-white border border-slate-100 rounded-xl p-5 shadow-sm flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-semibold text-slate-900">Comments (24)</h3>
+            <button class="text-xs text-slate-500 hover:text-slate-700">Newest</button>
+          </div>
+
+          <div class="mt-3 text-xs text-slate-500">Community replies are visible to everyone. Moderation tools available for authors.</div>
+
+          <!-- Comments list -->
+          <div class="mt-4 space-y-3 overflow-auto max-h-56 pr-2 scrollbar-thin">
+            <!-- Comment 1 -->
+            <div class="flex gap-3">
+              <img alt="avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c4d5e6f7a8b9c0d" class="w-9 h-9 rounded-full">
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-medium text-slate-800">Jordan Miles</div>
+                  <div class="text-xs text-slate-400">2h</div>
+                </div>
+                <div class="mt-1 text-sm text-slate-700">Great perspective — I especially appreciated the examples around progressive disclosure. Simplifies complex flows without losing functionality.</div>
+                <div class="mt-2 flex items-center gap-3 text-xs text-slate-400">
+                  <button class="hover:text-indigo-600">Like</button>
+                  <button class="hover:text-indigo-600">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="flex gap-3">
+              <img alt="avatar" src="https://images.unsplash.com/photo-1544739313-1a162f1d4f6b?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=b2c3d4e5f6a7b8c9d0e1" class="w-9 h-9 rounded-full">
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-medium text-slate-800">Priya Kapoor</div>
+                  <div class="text-xs text-slate-400">5h</div>
+                </div>
+                <div class="mt-1 text-sm text-slate-700">Can you share more on accessibility considerations for streamlined interfaces?</div>
+                <div class="mt-2 flex items-center gap-3 text-xs text-slate-400">
+                  <button class="hover:text-indigo-600">Like</button>
+                  <button class="hover:text-indigo-600">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comment 3 (reply snippet) -->
+            <div class="flex gap-3">
+              <img alt="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f4e5d6c7b8a9e0d1c2b" class="w-9 h-9 rounded-full">
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-medium text-slate-800">Ava Cole <span class="ml-2 px-2 py-0.5 text-xs bg-indigo-50 text-indigo-700 rounded-full">Author</span></div>
+                  <div class="text-xs text-slate-400">1d</div>
+                </div>
+                <div class="mt-1 text-sm text-slate-700">Thanks Jordan — accessibility is core to the approach. I'll publish a follow-up with checklist items and examples next week.</div>
+                <div class="mt-2 flex items-center gap-3 text-xs text-slate-400">
+                  <button class="hover:text-indigo-600">Like</button>
+                  <button class="hover:text-indigo-600">Reply</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Comment input (non-functional preview) -->
+          <form class="mt-4">
+            <label for="comment" class="sr-only">Write a comment</label>
+            <div class="flex gap-3">
+              <img alt="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&q=80&auto=format&fit=crop&ixlib=rb-4.0.3&s=99e6e8ff1a2e3c2c9a6a9d5f8b7c9b4b" class="w-10 h-10 rounded-full">
+              <div class="flex-1">
+                <textarea id="comment" rows="2" placeholder="Join the conversation..." class="w-full resize-none rounded-md border border-slate-100 bg-slate-50 px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-200"></textarea>
+                <div class="mt-2 flex items-center justify-between">
+                  <div class="text-xs text-slate-400">Be respectful. No spam.</div>
+                  <div class="flex items-center gap-2">
+                    <button type="button" class="text-xs text-slate-500 hover:text-slate-700">Attach</button>
+                    <button type="submit" class="inline-flex items-center px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm rounded-md">Post</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </aside>
+      </div>
+
+      <!-- Footer note -->
+      <div class="mt-6 text-center text-xs text-slate-400">
+        This preview highlights a single post and comment thread. The full platform includes publication tools, user profiles, moderation, and analytics.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
